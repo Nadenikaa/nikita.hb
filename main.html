@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Никита, с днём рождения!</title>
+    <link rel="stylesheet" href='cssmain.css'>
+  </head>
+  
+  <body>
+    <!-- Экран 1: приветствие -->
+    <div class="screen active" id="screen1">
+      <h1>Привет <3 </h1>
+      <img src="privet.jpg" alt="Картинка для приветствия" />
+      <button class="btn-primary" onclick="showScreen2()">Привет!</button>
+    </div>
+
+    <!-- Экран 2: вопрос с выбором -->
+    <div class="screen" id="screen2">
+      <p>Готов получить поздравление??</p>
+      <img src="second.jpg" alt="Другая картинка" />
+      <div class="buttons-group">
+        <button class="btn-primary" onclick="showCards()">Да</button>
+        <button class="btn-secondary" onclick="showNoScreen()">Нет(</button>
+      </div>
+    </div>
+
+    <!-- Экран 3: реакция на «Нет» -->
+    <div class="screen" id="screenNo">
+      <p>Точно?</p>
+      <img src="cry.jpg" alt="Грустная картинка" />
+      <button class="btn-primary" onclick="showScreen2()">Я передумал…</button>
+    </div>
+
+    <!-- Экран 4: поздравление с карточками -->
+    <div class="screen" id="screenCards">
+      <h1>Никита, с днём рождения! 🎉</h1>
+
+      <div class="cards-container">
+        <!-- Карточка 1 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <img src="1.jpg" alt="Подарок" />
+            </div>
+            <div class="card-face card-back">
+              Пусть сбываются все мечты!
+            </div>
+          </div>
+        </div>
+        <!-- Карточка 2 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <img src="2.jpg" alt="Торт" />
+            </div>
+            <div class="card-face card-back">
+              Пусть каждый день будет ярким!
+            </div>
+          </div>
+        </div>
+        <!-- Карточка 3 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <img src="3.jpg" alt="Шарик" />
+            </div>
+            <div class="card-face card-back">
+              Пусть рядом будут верные друзья!
+            </div>
+          </div>
+        </div>
+        <!-- Карточка 4 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <img src="4.jpg" alt="Звезда" />
+            </div>
+            <div class="card-face card-back">
+              Пусть удача всегда будет с тобой!
+            </div>
+          </div>
+        </div>
+        <!-- Карточка 5 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <img src="nikita.jpg" />
+            </div>
+            <div class="card-face card-back">
+              С днём рождения!!
+            </div>
+          </div>
+        </div>
+        <!-- Карточка 6 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <img src="5.jpg" alt="Искорки" />
+            </div>
+            <div class="card-face card-back">
+              Пусть жизнь будет полна радости!
+            </div>
+          </div>
+        </div>
+        <!-- Карточка 7 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <img src="6.jpg" alt="Сердце" />
+            </div>
+            <div class="card-face card-back">
+              Пусть сердце будет наполнено счастьем!
+            </div>
+          </div>
+        </div>
+        <!-- Карточка 8 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <img src="7.jpg" alt="Радуга" />
+            </div>
+            <div class="card-face card-back">
+              Пусть впереди ждёт только хорошее!
+            </div>
+          </div>
+        </div>
+        <!-- Карточка 9 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <img src="8.jpg" alt="Хлопушка" />
+            </div>
+            <div class="card-face card-back">
+              Пусть этот год будет особенным!
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="final-text">
+        Никита, ты лучший! Пусть этот день будет незабываемым! ❤️
+      </div>
+
+      <br />
+      <button class="btn-primary" onclick="location.reload()">Ещё раз</button>
+    </div>
+
+     <script src="jsmain.js"></script>
+  </body>
+</html>

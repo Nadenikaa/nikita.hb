@@ -1,0 +1,147 @@
+body {
+
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:  rgb(147, 104, 226);
+        font-family: Arial, sans-serif;
+      }
+
+      .screen {
+        text-align: center;
+        background:#ad65f4;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        max-width: 400px;
+        width: 90%;
+      }
+
+      /* Скрываем неактивные экраны */
+      .screen:not(.active) {
+        display: none;
+      }
+
+      h1 {
+        font-size: 36px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 24px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 24px;
+      }
+
+      .buttons-group {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+      }
+
+      button {
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 8px;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+
+      .btn-primary {
+        background-color: #cd64e0;
+        color: white;
+      }
+
+      .btn-secondary {
+        background-color: #bdc3c7;
+        color: #333;
+      }
+
+      button:hover {
+        transform: scale(1.02);
+      }
+
+      .btn-primary:hover {
+        background-color: #b28feb;
+      }
+
+      .btn-secondary:hover {
+        background-color: #95a5a6;
+      }
+
+      /* Стили для карточек-перевёртышей */
+      .cards-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin-bottom: 30px;
+      }
+
+      .card {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        perspective: 1000px;
+        cursor: pointer;
+      }
+
+      .card-inner {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+      }
+
+      .card:hover .card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .card-face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        font-weight: bold;
+        color: white;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+      }
+
+      .card-front {
+        background: linear-gradient(135deg, #ad65f4, #ad65f4);
+      }
+
+      .card-back {
+        background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+        transform: rotateY(180deg);
+      }
+
+      .card-face img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        
+      }
+
+      .final-text {
+        font-size: 18px;
+        color: #444;
+        line-height: 1.5;
+      }
